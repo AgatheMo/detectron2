@@ -241,7 +241,7 @@ _C.MODEL.RPN.NMS_THRESH = 0.7
 _C.MODEL.ROI_HEADS = CN()
 _C.MODEL.ROI_HEADS.NAME = "Res5ROIHeads"
 # Number of foreground classes
-_C.MODEL.ROI_HEADS.NUM_CLASSES = 80
+_C.MODEL.ROI_HEADS.NUM_CLASSES = 17
 # Names of the input feature maps to be used by ROI heads
 # Currently all heads (box, mask, ...) use the same input feature map list
 # e.g., ["p2", "p3", "p4", "p5"] is commonly used for FPN
@@ -407,7 +407,7 @@ _C.MODEL.PANOPTIC_FPN.COMBINE.INSTANCES_CONFIDENCE_THRESH = 0.5
 _C.MODEL.RETINANET = CN()
 
 # This is the number of foreground classes.
-_C.MODEL.RETINANET.NUM_CLASSES = 80
+_C.MODEL.RETINANET.NUM_CLASSES = 17
 
 _C.MODEL.RETINANET.IN_FEATURES = ["p3", "p4", "p5", "p6", "p7"]
 
@@ -491,7 +491,7 @@ _C.SOLVER = CN()
 # See detectron2/solver/build.py for LR scheduler options
 _C.SOLVER.LR_SCHEDULER_NAME = "WarmupMultiStepLR"
 
-_C.SOLVER.MAX_ITER = 40000
+_C.SOLVER.MAX_ITER = 34000
 
 _C.SOLVER.BASE_LR = 0.001
 
@@ -516,7 +516,7 @@ _C.SOLVER.CHECKPOINT_PERIOD = 5000
 # Number of images per batch across all machines.
 # If we have 16 GPUs and IMS_PER_BATCH = 32,
 # each GPU will see 2 images per batch.
-_C.SOLVER.IMS_PER_BATCH = 16
+_C.SOLVER.IMS_PER_BATCH = 2
 
 # Detectron v1 (and previous detection code) used a 2x higher LR and 0 WD for
 # biases. This is not useful (at least for recent models). You should avoid
@@ -569,7 +569,7 @@ _C.TEST.PRECISE_BN.NUM_ITER = 200
 # Misc options
 # ---------------------------------------------------------------------------- #
 # Directory where output files are written
-_C.OUTPUT_DIR = "./output"
+_C.OUTPUT_DIR = "./sortie"
 # Set seed to negative to fully randomize everything.
 # Set seed to positive to use a fixed seed. Note that a fixed seed does not
 # guarantee fully deterministic behavior.
