@@ -4,8 +4,8 @@ MODEL:
   RESNETS:
     DEPTH: 101
 DATASETS:
-  TRAIN: "COCO_train_vertebre"
-  TEST:"COCO_test_vertebre"
+  TRAIN: ("COCO_train_vertebre",)
+  TEST: ("COCO_test_vertebre",)
 SOLVER:
   STEPS: (20000, 300000)
   MAX_ITER: 34000
