@@ -87,17 +87,17 @@ _C.INPUT.MASK_FORMAT = "polygon"  # alternative: "bitmask"
 # -----------------------------------------------------------------------------
 _C.DATASETS = CN()
 # List of the dataset names for training. Must be registered in DatasetCatalog
-_C.DATASETS.TRAIN = ("COCO_train_vertebre",)
+_C.DATASETS.TRAIN = ()
 # List of the pre-computed proposal files for training, which must be consistent
 # with datasets listed in DATASETS.TRAIN.
-_C.DATASETS.PROPOSAL_FILES_TRAIN = ("COCO_train_vertebre",)
+_C.DATASETS.PROPOSAL_FILES_TRAIN = ()
 # Number of top scoring precomputed proposals to keep for training
 _C.DATASETS.PRECOMPUTED_PROPOSAL_TOPK_TRAIN = 2000
 # List of the dataset names for testing. Must be registered in DatasetCatalog
-_C.DATASETS.TEST = ("COCO_test_vertebre",)
+_C.DATASETS.TEST = ()
 # List of the pre-computed proposal files for test, which must be consistent
 # with datasets listed in DATASETS.TEST.
-_C.DATASETS.PROPOSAL_FILES_TEST = ("COCO_test_vertebre",)
+_C.DATASETS.PROPOSAL_FILES_TEST = ()
 # Number of top scoring precomputed proposals to keep for test
 _C.DATASETS.PRECOMPUTED_PROPOSAL_TOPK_TEST = 1000
 
