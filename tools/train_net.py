@@ -155,6 +155,8 @@ def main(args):
 if __name__ == "__main__":
     args = default_argument_parser().parse_args()
     print("Command Line Args:", args)
+    register_coco_instances("COCO_test_vertebre", {}, "./vertebre_data/datasets/coco/annotations/test_segmentation.json", "./vertebre_data/datasets/coco/images")
+    register_coco_instances("COCO_train_vertebre", {}, "./vertebre_data/datasets/coco/annotations/train_segmentation.json", "./vertebre_data/datasets/coco/images")
     launch(
         main,
         args.num_gpus,
@@ -163,8 +165,7 @@ if __name__ == "__main__":
         dist_url=args.dist_url,
         args=(args,),
     )
-    print("AHHHHHHHHHHHH")
-    register_coco_instances("COCO_test_vertebre", {}, "./vertebre_data/datasets/coco/annotations/test_segmentation.json", "./vertebre_data/datasets/coco/images")
-    register_coco_instances("COCO_train_vertebre", {}, "./vertebre_data/datasets/coco/annotations/train_segmentation.json", "./vertebre_data/datasets/coco/images")
+
+
 
 
