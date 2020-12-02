@@ -22,9 +22,10 @@ from collections import OrderedDict
 import torch
 
 import detectron2.utils.comm as comm
+from detectron2.data import DatasetCatalog, MetadataCatalog
+from detectron2.data.datasets import register_coco_instances
 from detectron2.checkpoint import DetectionCheckpointer
 from detectron2.config import get_cfg
-from detectron2.data import MetadataCatalog
 from detectron2.engine import DefaultTrainer, default_argument_parser, default_setup, hooks, launch
 from detectron2.evaluation import (
     CityscapesEvaluator,
@@ -162,8 +163,7 @@ if __name__ == "__main__":
         dist_url=args.dist_url,
         args=(args,),
     )
-    from detectron2.data import DatasetCatalog, MetadataCatalog
-    from detectron2.data.datasets import register_coco_instances
+    print("AHHHHHHHHHHHH")
     register_coco_instances("COCO_test_vertebre", {}, "./vertebre_data/datasets/coco/annotations/test_segmentation.json", "./vertebre_data/datasets/coco/images")
     register_coco_instances("COCO_train_vertebre", {}, "./vertebre_data/datasets/coco/annotations/train_segmentation.json", "./vertebre_data/datasets/coco/images")
 
