@@ -97,7 +97,7 @@ _C.DATASETS.PRECOMPUTED_PROPOSAL_TOPK_TRAIN = 2000
 _C.DATASETS.TEST = ("COCO_test_vertebre",)
 # List of the pre-computed proposal files for test, which must be consistent
 # with datasets listed in DATASETS.TEST.
-_C.DATASETS.PROPOSAL_FILES_TEST = (COCO_test_vertebre",)
+_C.DATASETS.PROPOSAL_FILES_TEST = ("COCO_test_vertebre",)
 # Number of top scoring precomputed proposals to keep for test
 _C.DATASETS.PRECOMPUTED_PROPOSAL_TOPK_TEST = 1000
 
